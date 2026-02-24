@@ -131,3 +131,21 @@ La fenêtre principale s'ouvre avec 5 onglets :
 → Vérifie que tu es bien dans le bon dossier (celui qui contient `pom.xml`).
 
 ---
+
+## 📁 Structure du projet
+
+```
+parking/
+├── pom.xml                          ← Fichier de build Maven
+├── sql/
+│   └── init.sql                     ← Script SQL (tables + données de test)
+├── src/main/java/parking/
+│   ├── App.java                     ← Point d'entrée (main)
+│   ├── model/                       ← Place, Vehicule, Stationnement
+│   ├── dao/                         ← Accès base de données (CRUD)
+│   ├── ui/                          ← Interface graphique (Swing)
+│   └── util/
+│       └── DatabaseConnection.java  ← Configuration JDBC
+└── target/
+    └── GestionParking.jar           ← JAR exécutable (généré après mvn package)
+```
